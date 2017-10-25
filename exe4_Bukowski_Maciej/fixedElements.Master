@@ -1,0 +1,58 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="fixedElements.master.cs" Inherits="exe4_Bukowski_Maciej.fixedElements" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+<body class="background">
+    <form id="form1" runat="server">
+    
+    <table class="tableStyle">
+        <tr>
+            <td rowspan="4">&nbsp;</td>
+            <td>
+                <img src="IMG_4515-PANO.jpg" style="width:1210px; margin-bottom:-7px;"/>
+            </td>
+            <td rowspan="4">&nbsp;</td>
+        </tr>
+        <tr>
+            <td style="height:48px; width:1200px;" class="main">
+                <asp:Menu ID="menu" runat="server" CssClass="menu" Height="16px" Orientation="Horizontal" RenderingMode="Table" Width="1200px">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/home.aspx" Text="home" Value="home"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/about.aspx" Text="about me" Value="about me"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/contact.aspx" Text="contact me" Value="contact me"></asp:MenuItem>
+                    </Items>
+                </asp:Menu>
+            </td>
+        </tr>
+        <tr>
+            <td>
+        <asp:ContentPlaceHolder ID="Content" runat="server">
+        
+        </asp:ContentPlaceHolder>
+            </td>
+        </tr>
+        <tr>
+            <td style="height:48px; width:1200px;" class="main">
+                <div style="white-space: nowrap;">
+                    <div style="overflow:hidden; float:right; width: 171px;">
+                        <a href="https://www.facebook.com/maxlight95" class="fa fa-facebook"></a>
+                        <a href="https://www.linkedin.com/in/maciej-bukowski-a5559a147" class="fa fa-linkedin"></a>
+                    </div>
+                    <div style="width:829px; float:right; text-align:center; padding-top:20px;">
+                            Copyright by Maciej Bukowski 2017
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+    </form>
+    </body>
+</html>
